@@ -1,5 +1,6 @@
 "use client"
 
+import { Suspense } from "react";
 import { useOrganization } from "@clerk/nextjs";
 import { EmptyOrg } from "./_components/empty-org";
 import { useSearchParams } from "next/navigation";
@@ -10,7 +11,7 @@ interface DashboardSearchParams {
   favorites: string;
 }
 
-const DashboardPage = () => {
+const DashboardContent = () => {
   const { organization } = useOrganization();
   const searchParams = useSearchParams();
 
@@ -21,14 +22,23 @@ const DashboardPage = () => {
 
   return (
     <div className="flex-1 h-[calc(100%-80px)] p-6">
-            {!organization ? (
-              <EmptyOrg />
-            ) : (
-             <BoardList
-              orgId={organization.id}
-             query={params}
-             /> 
-           )}    </div>
+      {!organization ? (
+        <EmptyOrg />
+      ) : (
+        <BoardList
+          orgId={organization.id}
+          query={params}
+        /> 
+      )}
+    </div>
+  );
+};
+
+const DashboardPage = () => {
+  return (
+    <Suspense fallback={<div className="flex-1 h-[calc(100%-80px)] p-6" />}>
+      <DashboardContent />
+    </Suspense>
   );
 };
 

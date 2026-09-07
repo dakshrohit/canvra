@@ -9,6 +9,8 @@ interface BoardIdPageProps {
   }>;
 }
 
+export const dynamic = "force-dynamic";
+
 const BoardIdPage = async ({ params }: BoardIdPageProps) => {
   const resolvedParams = await params;
   const rawId = resolvedParams?.boardId;
