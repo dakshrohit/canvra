@@ -3,15 +3,17 @@ import { Liveblocks } from "@liveblocks/node";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "@/convex/_generated/api";
 
-const convex = new ConvexHttpClient(
-  process.env.NEXT_PUBLIC_CONVEX_URL!
-);
-
-const liveblocks = new Liveblocks({
-  secret: process.env.LIVEBLOCKS_SECRET!,
-});
-
 export async function POST(request: Request) {
+  const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
+  const liveblocksSecret = process.env.LIVEBLOCKS_SECRET;
+
+  if (!convexUrl || !liveblocksSecret) {
+    return new Response("Missing environment variables", { status: 500 });
+  }
+
+  const convex = new ConvexHttpClient(convexUrl);
+  const liveblocks = new Liveblocks({ secret: liveblocksSecret });
+
   const authorization = await auth();
   const user = await currentUser();
 
