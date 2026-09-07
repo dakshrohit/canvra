@@ -1,6 +1,6 @@
 # Miro‑clone Board v2
 
-## 📖 Overview
+##  Overview
 This repository contains a **web‑based collaborative whiteboard** that mimics the core features of Miro. Users can create boards, add sticky notes, draw shapes, and move objects in real‑time with other participants. The app is built with **Next.js 16**, **React**, **Tailwind CSS**, and **Liveblocks** for live synchronization.
 
 > **Why this matters for non‑technical people?**
@@ -9,7 +9,7 @@ This repository contains a **web‑based collaborative whiteboard** that mimics 
 
 ---
 
-## ✨ Key Features
+##  Key Features
 - **Real‑time collaboration** – changes appear instantly for all participants.
 - **Infinite canvas** – pan and zoom to any size.
 - **Sticky notes, shapes, and free‑hand drawing**.
@@ -19,7 +19,7 @@ This repository contains a **web‑based collaborative whiteboard** that mimics 
 
 ---
 
-## 🛠️ Tech Stack (Simplified)
+##  Tech Stack (Simplified)
 | Layer | Technology | What it does |
 |-------|------------|--------------|
 | Front‑end framework | **Next.js 16** (React) | Renders pages, handles routing, and provides server‑side rendering for fast load times. |
@@ -31,7 +31,7 @@ This repository contains a **web‑based collaborative whiteboard** that mimics 
 
 ---
 
-## 📦 Prerequisites (What you need before starting)
+##  Prerequisites (What you need before starting)
 1. **Node.js** (v20 or later) – the JavaScript runtime. Download from [nodejs.org](https://nodejs.org/).
 2. **Git** – for version control (already used for this repo).
 3. An internet connection (to install dependencies and run the live‑sync service).
@@ -39,7 +39,7 @@ This repository contains a **web‑based collaborative whiteboard** that mimics 
 
 ---
 
-## 🚀 Getting Started – Step‑by‑Step Guide
+##  Getting Started – Step‑by‑Step Guide
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Prem759-0/Miro-clone-public.git
@@ -66,7 +66,7 @@ This repository contains a **web‑based collaborative whiteboard** that mimics 
 
 ---
 
-## 📦 Building for Production
+##  Building for Production
 When you are ready to share the app with others (e.g., on a public website):
 ```bash
 npm run build   # creates an optimized production bundle
@@ -76,7 +76,7 @@ You can also deploy to **Vercel** (the creators of Next.js) by connecting the Gi
 
 ---
 
-## 📁 Project Structure (What’s where?)
+##  Project Structure (What’s where?)
 ```
 boardv2/
 ├─ app/                # Next.js app router – page components
@@ -95,7 +95,7 @@ boardv2/
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 1. Fork the repository.
 2. Create a new branch: `git checkout -b feature/your‑feature`.
 3. Make your changes.
@@ -104,18 +104,8 @@ boardv2/
 
 ---
 
-## 📄 License
+##  License
 This project is licensed under the **MIT License** – you are free to use, modify, and distribute it.
 
 ---
-
-## 📞 Contact & Support
-- **Author**: Prem759‑0
-- **GitHub**: https://github.com/Prem759-0
-- For questions, open an issue in the repository or reach out via the GitHub Discussions page.
-# Open an issue on the GitHub repository for any questions.
--Email - a70064182@gmail.com
--My WhatsApp Phone no - 9619111051
----
-
 *Happy collaborating!*
